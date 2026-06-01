@@ -11,7 +11,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import { SlideCaptcha } from '@codedart/slide-captcha-react-native';
+import { SlideCaptcha } from '@codedartdev/slide-captcha-react-native';
 
 const API_BASE_URL = 'http://192.168.0.10:8000';
 

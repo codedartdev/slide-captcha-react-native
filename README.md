@@ -1,11 +1,11 @@
-# @codedart/slide-captcha-react-native
+# @codedartdev/slide-captcha-react-native
 
 Pacote TypeScript para usar um Laravel Slide CAPTCHA em apps React Native e Expo. Ele foi pensado para o fluxo de formulário mais comum: o desafio é pré-carregado em segundo plano, aparece somente quando o usuário toca em submit e, depois de resolvido, retorna um token para o submit real.
 
 ## Instalação
 
 ```sh
-npm install @codedart/slide-captcha-react-native
+npm install @codedartdev/slide-captcha-react-native
 ```
 
 O pacote declara `react` e `react-native` como peer dependencies.
@@ -42,7 +42,7 @@ POST /slide-captcha/verify
 ```tsx
 import { useState } from 'react';
 import { Pressable, Text, TextInput, View } from 'react-native';
-import { SlideCaptcha } from '@codedart/slide-captcha-react-native';
+import { SlideCaptcha } from '@codedartdev/slide-captcha-react-native';
 
 export function LoginScreen() {
   const [email, setEmail] = useState('');
@@ -96,7 +96,7 @@ export function LoginScreen() {
 ## Client HTTP
 
 ```ts
-import { createSlideCaptchaClient } from '@codedart/slide-captcha-react-native';
+import { createSlideCaptchaClient } from '@codedartdev/slide-captcha-react-native';
 
 const client = createSlideCaptchaClient({
   baseUrl: 'http://192.168.0.10:8000',
@@ -125,7 +125,7 @@ Em produção, use HTTPS para proteger credenciais, cookies, tokens de login e o
 Erros são normalizados como `SlideCaptchaError`:
 
 ```ts
-import { SlideCaptchaError } from '@codedart/slide-captcha-react-native';
+import { SlideCaptchaError } from '@codedartdev/slide-captcha-react-native';
 
 <SlideCaptcha
   baseUrl="http://192.168.0.10:8000"
