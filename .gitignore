@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+.DS_Store
+.expo
+*.log
+example/expo/node_modules
+example/expo/.expo

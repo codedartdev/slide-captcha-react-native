@@ -1,0 +1,69 @@
+{
+  "name": "@codedart/slide-captcha-react-native",
+  "version": "0.1.0",
+  "description": "React Native and Expo client for Laravel Slide CAPTCHA.",
+  "license": "MIT",
+  "author": "CodeDart",
+  "homepage": "https://github.com/codedartdev/slide-captcha-react-native#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedartdev/slide-captcha-react-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codedartdev/slide-captcha-react-native/issues"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "laravel",
+    "captcha",
+    "slide-captcha"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-native": ">=0.72.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@types/react": "^18.3.12",
+    "@types/react-test-renderer": "^18.3.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2",
+    "react": "^18.3.1",
+    "react-native": "^0.76.3",
+    "react-test-renderer": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.17.0",
+    "vitest": "^4.1.8"
+  }
+}

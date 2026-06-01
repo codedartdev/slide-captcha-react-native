@@ -1,0 +1,5 @@
+node_modules
+dist
+coverage
+example/expo/node_modules
+example/expo/.expo

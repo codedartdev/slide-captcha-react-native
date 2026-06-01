@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Slide CAPTCHA Example",
+    "slug": "slide-captcha-example",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "assetBundlePatterns": ["**/*"]
+  }
+}
