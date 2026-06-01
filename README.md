@@ -191,6 +191,18 @@ npm run build
 npm run format
 ```
 
+## Build publicado
+
+O pacote instalado usa os arquivos compilados em `dist`, apontados por `main`, `module`, `types` e `exports`.
+
+O build é gerado automaticamente antes de `npm pack` e `npm publish` pelo script `prepack`:
+
+```sh
+npm run build
+```
+
+Por segurança e compatibilidade com React Native, Expo, CI e instalações offline, este pacote não executa build em `postinstall`. Assim, instalar a biblioteca não roda código arbitrário no app consumidor e não exige que o projeto consumidor tenha a toolchain de build do pacote. Os arquivos em `src` permanecem no repositório como referência técnica; o tarball publicado contém apenas `dist`, `README.md`, `LICENSE` e `package.json`.
+
 ## Publicação futura
 
 O pacote possui um deploy automatizado:
@@ -228,4 +240,4 @@ npm publish --access public
 git push --follow-tags
 ```
 
-O pacote é scoped público e mantém `publishConfig.access` como `public`.
+Durante `npm publish`, o npm executa `prepack`, que roda `npm run build` novamente e empacota a versão compilada mais recente. O pacote é scoped público e mantém `publishConfig.access` como `public`.

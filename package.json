@@ -32,7 +32,6 @@
   },
   "files": [
     "dist",
-    "src",
     "README.md",
     "LICENSE"
   ],
@@ -43,6 +42,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
     "deploy": "node scripts/deploy.mjs",
+    "prepack": "npm run build",
     "test": "vitest run",
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",
