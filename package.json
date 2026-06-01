@@ -42,6 +42,7 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "deploy": "node scripts/deploy.mjs",
     "test": "vitest run",
     "lint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc --noEmit",

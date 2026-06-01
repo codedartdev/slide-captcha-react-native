@@ -193,10 +193,39 @@ npm run format
 
 ## Publicação futura
 
+O pacote possui um deploy automatizado:
+
 ```sh
 npm login
-npm run build
-npm publish --access public
+npm run deploy
 ```
 
-Antes de publicar, atualize `version`, `repository`, `homepage` e valide o exemplo Expo contra o backend Laravel real.
+O release padrão é `patch`. Também é possível escolher o tipo ou uma versão exata:
+
+```sh
+npm run deploy -- patch
+npm run deploy -- minor
+npm run deploy -- major
+npm run deploy -- 1.2.3
+npm run deploy -- prerelease --preid beta
+```
+
+Antes de publicar pela primeira vez:
+
+1. Faça login no npm com uma conta que tenha acesso à organização `codedartdev`.
+2. Garanta que a branch tenha upstream remoto, por exemplo `git push -u origin main`.
+3. Valide o exemplo Expo contra o backend Laravel real.
+
+O deploy exige uma working tree Git limpa e executa, nesta ordem:
+
+```sh
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+npm version <release>
+npm publish --access public
+git push --follow-tags
+```
+
+O pacote é scoped público e mantém `publishConfig.access` como `public`.
