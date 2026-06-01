@@ -1,6 +1,6 @@
 {
   "name": "@codedartdev/slide-captcha-react-native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native and Expo client for Laravel Slide CAPTCHA.",
   "license": "MIT",
   "author": "CodeDart",
